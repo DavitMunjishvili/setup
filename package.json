@@ -16,6 +16,7 @@
     "@eslint/markdown": "^6.4.0",
     "@types/bun": "latest",
     "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.5",
     "globals": "^16.1.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.0.0",
