@@ -1,5 +1,7 @@
 # setup
 
+Motivation behind this repository is to help me: - setup a computer very quickly - adapt to os (linux and macos) - dynamic and adaptable to the environment - easily extensible
+
 To install dependencies:
 
 ```bash
@@ -11,5 +13,3 @@ To run:
 ```bash
 bun run index.ts
 ```
-
-This project was created using `bun init` in bun v1.2.10. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
