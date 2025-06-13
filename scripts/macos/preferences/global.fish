@@ -12,3 +12,7 @@ run_or_echo "defaults write -g AppleInterfaceStyle -string 'Dark'"
 
 # prevents macos from automatically switching to a space containing an application's open windows when you switch to that app.
 run_or_echo "defaults write -g AppleSpacesSwitchOnActivate -bool false"
+
+
+# control+command to drag window
+run_or_echo "defaults write -g NSWindowShouldDragOnGesture -bool true"
