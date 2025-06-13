@@ -18,6 +18,14 @@ end
 
 
 
+if not type git > /dev/null
+    echo "--- Installing Git ---"
+    run_or_echo "brew install git"
+else
+    echo "--- Git is already installed ---"
+end
+
+
 echo "--- Installing apps ---"
 for app_script in (ls ./apps/*.fish)
     echo "--- Running $app_script ---"
