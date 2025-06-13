@@ -14,6 +14,6 @@ switch $platform
     case macos
         run_or_echo "brew install --cask nikitabobko/tap/$app"
     case '*'
-        echo "Unsupported platform: $platform"
+        echo "Unsupported platform: $platform for $app"
         exit 1
 end

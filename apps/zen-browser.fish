@@ -25,6 +25,6 @@ switch $platform
     case fedora
         run_or_echo "sudo dnf install -y $app"
     case '*'
-        echo "Unsupported platform: $platform"
+        echo "Unsupported platform: $platform for $app"
         exit 1
 end
