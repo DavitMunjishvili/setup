@@ -1,0 +1,16 @@
+#!/usr/bin/env fish
+
+echo "running macos-specific setup..."
+
+echo "--- Settings macos preferences ---"
+for preference_script in (ls ./scripts/macos/preferences/*.fish)
+    echo "--- Running $preference_script ---"
+    fish $preference_script
+end
+
+
+echo "--- Installing apps ---"
+for app_script in (ls ./apps/*.fish)
+    echo "--- Running $app_script ---"
+    fish $app_script macos
+end
