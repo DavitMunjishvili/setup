@@ -24,3 +24,11 @@ run_or_echo "defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad T
 
 # app expose
 run_or_echo "defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerVertSwipeGesture -int 2"
+
+
+# enables the right-click on magic mouse
+run_or_echo "defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -string 'TwoButton'"
+
+
+# enables double-click to open mission control on magic mouse
+run_or_echo "defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseTwoFingerDoubleTapGesture -int 3"
