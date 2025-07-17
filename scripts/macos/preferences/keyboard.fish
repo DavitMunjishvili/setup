@@ -7,7 +7,9 @@ run_or_echo "defaults write com.apple.HIToolbox AppleFnUsageType -int 0"
 
 
 # this command completely replaces the existing input sources
-run_or_echo 'defaults write com.apple.HIToolbox AppleEnabledInputSources -array \'{ InputSourceKind = "Keyboard Layout"; "KeyboardLayout ID" = 0; "KeyboardLayout Name" = "U.S."; }' '{ InputSourceKind = "Keyboard Layout"; "KeyboardLayout ID" = -27650; "KeyboardLayout Name" = "Georgian-QWERTY"; }\''
+run_or_echo "defaults write com.apple.HIToolbox AppleEnabledInputSources -array \
+\"'{ InputSourceKind = \\\"Keyboard Layout\\\"; \\\"KeyboardLayout ID\\\" = 0; \\\"KeyboardLayout Name\\\" = \\\"U.S.\\\"; }'\" \
+\"'{ InputSourceKind = \\\"Keyboard Layout\\\"; \\\"KeyboardLayout ID\\\" = -27650; \\\"KeyboardLayout Name\\\" = \\\"Georgian-QWERTY\\\"; }'\""
 
 
 # disables the press-and-hold feature
