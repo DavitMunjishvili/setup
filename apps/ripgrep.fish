@@ -5,7 +5,7 @@ set app "ripgrep"
 
 source ./utils/helpers.fish
 
-if is_installed $app $platform
+if is_installed rg $platform
     echo "$app is already installed, skipping."
     exit 0
 end
