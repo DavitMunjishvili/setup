@@ -8,6 +8,8 @@ for preference_script in (ls ./scripts/macos/preferences/*.fish)
     fish $preference_script
 end
 
+echo "--- Done with macos preferences ---"
+echo ""
 
 if not type brew > /dev/null
     echo "Installing Homebrew:"
@@ -16,7 +18,8 @@ else
     echo "--- Homebrew is already installed ---"
 end
 
-
+echo "--- Done with `brew` installation ---"
+echo ""
 
 if not type git > /dev/null
     echo "Installing Git:"
@@ -25,12 +28,20 @@ else
     echo "--- Git is already installed ---"
 end
 
+echo "--- Done with `git` installation ---"
+echo ""
+
 
 echo "Installing apps:"
 for app_script in (ls ./apps/*.fish)
     echo "--- Running $app_script ---"
     fish $app_script macos
 end
+
+echo "--- Done with apps installation ---"
+echo ""
+
+
 echo "NOTE: For now you need to install Raycast extensions manually."
 set -l raycast_extensions (string trim (cat scripts/macos/raycast-extensions.txt))
 
