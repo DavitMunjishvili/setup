@@ -31,3 +31,10 @@ for app_script in (ls ./apps/*.fish)
     echo "--- Running $app_script ---"
     fish $app_script macos
 end
+echo "NOTE: For now you need to install Raycast extensions manually."
+set -l raycast_extensions (string trim (cat scripts/macos/raycast-extensions.txt))
+
+for ext in $raycast_extensions
+    echo "Please install Raycast extension: \"$ext\""
+    # run_or_echo "raycast install extension $extension"
+end
