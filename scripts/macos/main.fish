@@ -54,3 +54,10 @@ for ext in $raycast_extensions
     echo "Please install Raycast extension: \"$ext\""
     # run_or_echo "raycast install extension $extension"
 end
+
+
+
+# git clone my .config repository to ~/.config
+
+echo "Cloning my .config repository:"
+run_or_echo "git clone git@github.com:DavitMunjishvili/.config.git ~/.config"
