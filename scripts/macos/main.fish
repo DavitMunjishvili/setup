@@ -11,25 +11,30 @@ end
 echo "--- Done with macos preferences ---"
 echo ""
 
-if not type brew > /dev/null
-    echo "Installing Homebrew:"
-    run_or_echo "/bin/bash -c '$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)'"
-else
-    echo "--- Homebrew is already installed ---"
-end
 
-echo "--- Done with `brew` installation ---"
-echo ""
+# NOTE: i think git and brew should be already available
+# otherwise how would this repository be available
 
-if not type git > /dev/null
-    echo "Installing Git:"
-    run_or_echo "brew install git"
-else
-    echo "--- Git is already installed ---"
-end
+# if not type brew > /dev/null
+#     echo "Installing Homebrew:"
+#     run_or_echo "/bin/bash -c '$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)'"
+# else
+#     echo "--- Homebrew is already installed ---"
+# end
+#
+# echo "--- Done with `brew` installation ---"
+# echo ""
 
-echo "--- Done with `git` installation ---"
-echo ""
+
+# if not type git > /dev/null
+#     echo "Installing Git:"
+#     run_or_echo "brew install git"
+# else
+#     echo "--- Git is already installed ---"
+# end
+#
+# echo "--- Done with `git` installation ---"
+# echo ""
 
 
 echo "Installing apps:"
