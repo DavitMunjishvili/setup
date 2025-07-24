@@ -3,7 +3,7 @@
 source ./utils/helpers.fish
 
 # controls the visibility of the path bar at the bottom of finder windows
-run_or_echo "defaults read com.apple.finder ShowExternalHardDrivesOnDesktop"
+run_or_echo "defaults write com.apple.finder ShowPathbar -bool true"
 
 
 # determines if icons for connected external drives are displayed on the desktop
