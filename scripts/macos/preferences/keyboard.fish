@@ -17,7 +17,7 @@ run_or_echo "defaults write -g ApplePressAndHoldEnabled -bool false"
 
 
 # key repeat and delay
-run_or_echo "defaults write -g InitialKeyRepeat -int 16 && defaults write -g KeyRepeat -int 2"
+run_or_echo "defaults write -g InitialKeyRepeat -int 12 && defaults write -g KeyRepeat -int 2"
 
 
 
