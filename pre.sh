@@ -48,3 +48,7 @@ if [[ "$SHELL" != *fish ]]; then
 		echo "Default shell changed to fish. Restart terminal for changes to take effect."
 	fi
 fi
+
+# Execute the main fish script, passing along any arguments
+echo "[I] Handing over to run.fish..."
+fish run.fish "$@"
