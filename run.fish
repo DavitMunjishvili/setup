@@ -49,7 +49,9 @@ end
 # Run platform-specific setup
 switch $platform
     case macos
-        ./scripts/macos/main.fish $args
+        fish ./scripts/macos/main.fish $platform $args
     case arch debian fedora
-        ./scripts/linux/main.fish $platform $args
+        fish ./scripts/linux/main.fish $platform $args
 end
+
+echo "[I] Setup complete."

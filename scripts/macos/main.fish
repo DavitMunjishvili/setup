@@ -1,5 +1,12 @@
 #!/usr/bin/env fish
 
+set platform $argv[1]
+
+if test -z "$platform"
+    echo "[E] No platform passed to macos/main.fish"
+    exit 1
+end
+
 echo "running macos-specific setup..."
 
 echo "Settings macos preferences:"
@@ -40,7 +47,7 @@ echo ""
 echo "Installing apps:"
 for app_script in (ls ./apps/*.fish)
     echo "--- Running $app_script ---"
-    fish $app_script macos
+    fish $app_script $platform
 end
 
 echo "--- Done with apps installation ---"
@@ -57,3 +64,6 @@ end
 echo "Cloning my .config repository:"
 mv ~/.config/ ~/.config.bak
 git clone git@github.com:DavitMunjishvili/.config.git ~/.config 
+
+
+echo "--- Done with macos-specific setup ---"
