@@ -5,13 +5,8 @@ set app "zen-browser"
 
 source ./utils/helpers.fish
 
-if test -d /Applications/Zen.app
-    echo "Zen.app is already installed in /Applications, skipping."
-    exit 0
-end
-
-if is_installed $app $platform
-    echo "$app is already installed, skipping."
+if is_gui_app_installed "Zen"
+    echo "Zen is already installed, skipping."
     exit 0
 end
 

@@ -5,14 +5,8 @@ set app "raycast"
 
 source ./utils/helpers.fish
 
-if test -d /Applications/Raycast.app/
-    echo "Raycast is already installed in /Applications, skipping."
-    exit 0
-end
-
-
-if is_installed $app $platform
-    echo "$app is already installed, skipping."
+if is_gui_app_installed "Raycast"
+    echo "Raycast is already installed, skipping."
     exit 0
 end
 

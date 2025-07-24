@@ -22,3 +22,7 @@ function is_installed --argument-names app platform
             return 1
     end
 end
+
+function is_gui_app_installed --argument-names app_name
+    test -d "/Applications/$app_name.app"
+end
