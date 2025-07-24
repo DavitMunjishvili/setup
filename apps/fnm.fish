@@ -13,12 +13,8 @@ end
 switch $platform
     case macos
         run_or_echo "brew install $app"
-    case arch
-        run_or_echo "cargo install $app"
-    case debian
-        run_or_echo "cargo install $app"
-    case fedora
-        run_or_echo "cargo install $app"
+    case arch debian fedora
+        run_or_echo "curl -fsSL https://fnm.vercel.app/install | fish"
     case '*'
         echo "Unsupported platform: $platform for $app"
         exit 1
